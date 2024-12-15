@@ -94,7 +94,11 @@ export default [
 			],
 			'arrow-body-style': ['off'],
 			'react/jsx-key': ['error'],
-			'prettier/prettier': ['error'],
+			'prettier/prettier': ['error',
+				{
+					endOfLine: 'auto',
+				},
+			],
 			'react/require-default-props': ['off'],
 		},
 	},
@@ -117,6 +121,7 @@ export default [
 		rules: {
 			'@typescript-eslint/ban-ts-comment': 'off',
 			'@typescript-eslint/ban-ts-ignore': 'off',
+			'@typescript-eslint/no-unused-vars': 'off',
 		},
 	},
 ];

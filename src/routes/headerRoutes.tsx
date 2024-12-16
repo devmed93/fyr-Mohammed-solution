@@ -1,8 +1,10 @@
 import React from 'react';
-import { appPages, authPages, componentsPages } from '@/config/pages.config';
+import { appPages, authPages, componentsPages, medMindedAppPages } from '@/config/pages.config';
 import { TRoute } from '@/types/route.type';
 import DefaultHeaderTemplate from '../templates/layouts/Headers/DefaultHeader.template';
 import ComponentAndTemplateHeaderTemplate from '../templates/layouts/Headers/ComponentAndTemplateHeader.template';
+import MedMindedAsideTemplate from '@/templates/layouts/Asides/MedMindedAside.template';
+import MedMindedHeaderTemplate from '@/templates/layouts/Headers/MedMindedHeader.template';
 
 const headerRoutes: TRoute[] = [
 	{ path: authPages.loginPage.to, element: null },
@@ -17,6 +19,10 @@ const headerRoutes: TRoute[] = [
 	{
 		path: `${componentsPages.integratedPages.to}/*`,
 		element: <ComponentAndTemplateHeaderTemplate />,
+	},
+	{
+		path: `${medMindedAppPages.currentChatPage.to}`,
+		element: <MedMindedHeaderTemplate />,
 	},
 	{
 		path: appPages.projectAppPages.subPages.projectDashboardPage.to,

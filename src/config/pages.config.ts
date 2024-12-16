@@ -18,6 +18,32 @@ export const examplePages = {
 		icon: 'HeroCubeTransparent',
 	},
 };
+export const medMindedAppPages = {
+	homePage: {
+		id: 'medMindedApp',
+		to: '/med-minded',
+		text: 'Home',
+		icon: 'HeroHome',
+	},
+	buildingLbraryPage: {
+		id: 'medMindedApp',
+		to: '/med-minded/library',
+		text: 'Library',
+		icon: 'HeroBuildingLibrary',
+	},
+	rectangleStack: {
+		id: 'medMindedApp',
+		to: '/med-minded/history',
+		text: 'History',
+		icon: 'HeroRectangleStack',
+	},
+	currentChatPage: {
+		id: 'medMindedApp',
+		to: '/med-minded/current-chat',
+		text: 'Current Chat',
+		icon: 'HeroChatBubbleBottomCenterText',
+	},
+};
 
 export const appPages = {
 	aiAppPages: {

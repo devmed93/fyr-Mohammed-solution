@@ -1,3 +1,5 @@
+'use client';
+
 import Icon from '@/components/icon/Icon';
 import Container from '@/components/layouts/Container/Container';
 import PageWrapper from '@/components/layouts/PageWrapper/PageWrapper';
@@ -5,6 +7,13 @@ import Subheader, { SubheaderLeft, SubheaderRight } from '@/components/layouts/S
 import Button from '@/components/ui/Button';
 import React from 'react';
 import PageCounterPartial from '../_partials/PageCounter.partial';
+import AIChatItemContainerCommon from '../../ai/_common/AIChatItemContainer.common';
+import AIChatInputContainerCommon from '../../ai/_common/AIChatInputContainer.common';
+import FieldWrap from '@/components/form/FieldWrap';
+import { Formik, useFormik } from 'formik';
+import Input from '@/components/form/Input';
+import CurrentChatLeftContentPartial from '../_partials/CurrentChatLeftContent.partial';
+import CurrentChatRightContentPartial from '../_partials/CurrentChatRightContent.partial';
 
 const CurrentChatClient = () => {
 	return (
@@ -26,8 +35,13 @@ const CurrentChatClient = () => {
 					</div>
 				</SubheaderRight>
 			</Subheader>
-			<Container>
-				<span>Here lays the content of current chat page</span>
+			<Container className='mx-1 flex h-full gap-x-4 bg-gray-50 p-0'>
+				<div className='flex h-[500px] flex-1 flex-col gap-y-4 overflow-y-auto bg-gray-100 p-4 pb-0'>
+					<CurrentChatLeftContentPartial />
+				</div>
+				<div className='flex h-[500px] flex-1 justify-around gap-x-5 bg-gray-100 p-4'>
+					<CurrentChatRightContentPartial />
+				</div>
 			</Container>
 		</PageWrapper>
 	);
